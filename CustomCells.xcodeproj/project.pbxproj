@@ -13,6 +13,10 @@
 		991284F12746270F00F7C7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991284EF2746270F00F7C7EE /* Main.storyboard */; };
 		991284F32746271300F7C7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991284F22746271300F7C7EE /* Assets.xcassets */; };
 		991284F62746271300F7C7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991284F42746271300F7C7EE /* LaunchScreen.storyboard */; };
+		991284FF27462B5600F7C7EE /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991284FD27462B5600F7C7EE /* ImageCell.swift */; };
+		9912850027462B5600F7C7EE /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991284FE27462B5600F7C7EE /* ImageCell.xib */; };
+		9912850427462FA800F7C7EE /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912850227462FA800F7C7EE /* FieldCell.swift */; };
+		9912850527462FA800F7C7EE /* FieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9912850327462FA800F7C7EE /* FieldCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		991284F22746271300F7C7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		991284F52746271300F7C7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991284F72746271300F7C7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		991284FD27462B5600F7C7EE /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		991284FE27462B5600F7C7EE /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		9912850227462FA800F7C7EE /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
+		9912850327462FA800F7C7EE /* FieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		991284E82746270F00F7C7EE /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				9912850127462B6100F7C7EE /* Xibs */,
 				991284E92746270F00F7C7EE /* AppDelegate.swift */,
 				991284EB2746270F00F7C7EE /* SceneDelegate.swift */,
 				991284ED2746270F00F7C7EE /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				991284F72746271300F7C7EE /* Info.plist */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		9912850127462B6100F7C7EE /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				991284FD27462B5600F7C7EE /* ImageCell.swift */,
+				991284FE27462B5600F7C7EE /* ImageCell.xib */,
+				9912850227462FA800F7C7EE /* FieldCell.swift */,
+				9912850327462FA800F7C7EE /* FieldCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				991284F62746271300F7C7EE /* LaunchScreen.storyboard in Resources */,
+				9912850027462B5600F7C7EE /* ImageCell.xib in Resources */,
 				991284F32746271300F7C7EE /* Assets.xcassets in Resources */,
 				991284F12746270F00F7C7EE /* Main.storyboard in Resources */,
+				9912850527462FA800F7C7EE /* FieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				991284EE2746270F00F7C7EE /* ViewController.swift in Sources */,
+				991284FF27462B5600F7C7EE /* ImageCell.swift in Sources */,
 				991284EA2746270F00F7C7EE /* AppDelegate.swift in Sources */,
+				9912850427462FA800F7C7EE /* FieldCell.swift in Sources */,
 				991284EC2746270F00F7C7EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
