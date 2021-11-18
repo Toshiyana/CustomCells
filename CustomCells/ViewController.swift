@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
         table.register(ImageCell.nib(), forCellReuseIdentifier: ImageCell.identifier)
         table.register(FieldCell.nib(), forCellReuseIdentifier: FieldCell.identifier)
+        table.register(TextViewCell.nib(), forCellReuseIdentifier: TextViewCell.identifier)
         table.delegate = self
         table.dataSource = self
     }
@@ -31,16 +32,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // indexPath.rowは大きい順にif文にかける
-        
-        if indexPath.row > 5 {
+             
+        if indexPath.row > 7 {
             let customCell = tableView.dequeueReusableCell(withIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
             customCell.configure(with: "Custom cell", imageName: "gear")
             return customCell
         }
 
-        if indexPath.row > 2 {
+        if indexPath.row > 5 {
             let fieldCell = tableView.dequeueReusableCell(withIdentifier: FieldCell.identifier, for: indexPath) as! FieldCell
+            
+            // addTargetでTableView上で、Cellの要素にアクセス可能（.editingDidEnd: textFieldでreturnを押した時に処理を行う）
+            fieldCell.field.addTarget(self, action: #selector(didChangedField(_:)), for: .editingDidEnd)
+            
             return fieldCell
+        }
+        
+        if indexPath.row > 2 {
+            let textViewCell = tableView.dequeueReusableCell(withIdentifier: TextViewCell.identifier, for: indexPath) as! TextViewCell
+            textViewCell.textViewInCell.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(_:)))
+            
+            textViewCell.textViewInCell.delegate = self // cellのtextViewの値をViewControllerで取得するために、delegateを利用
+            
+            return textViewCell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -65,5 +79,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             print("it's now off")
         }
+    }
+    
+    @objc func didChangedField(_ sender: UITextField) {
+        print(sender.text ?? "")
+    }
+
+    @objc func tapDone(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+}
+
+// ViewControllerでCell内のTextViewのDidEndEditingを記述する場合（ViewControllerで値の取得が可能）
+extension ViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        print(textView.text ?? "")
     }
 }
