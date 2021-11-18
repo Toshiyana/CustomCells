@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DatePickerCell" rowHeight="249" id="KGk-i7-Jjw" customClass="DatePickerCell" customModule="CustomCells" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="249"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="249"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxM-Uh-irJ">
+                        <rect key="frame" x="0.0" y="57" width="372" height="162"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="372" id="UZ6-ls-8Hb"/>
+                            <constraint firstAttribute="height" constant="162" id="rFF-j8-VXd"/>
+                        </constraints>
+                    </datePicker>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OWm-FU-LmP">
+                        <rect key="frame" x="111" y="16" width="150" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="F0h-00-pTg"/>
+                            <constraint firstAttribute="height" constant="32" id="lsS-BS-nsZ"/>
+                        </constraints>
+                        <segments>
+                            <segment title="間隔"/>
+                            <segment title="日時"/>
+                        </segments>
+                        <connections>
+                            <action selector="timeOptionSegmentedChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="RT2-L6-WjZ"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kxM-Uh-irJ" firstAttribute="top" secondItem="OWm-FU-LmP" secondAttribute="bottom" constant="8" symbolic="YES" id="07S-3t-MaW"/>
+                    <constraint firstItem="OWm-FU-LmP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="EgT-fc-3os"/>
+                    <constraint firstItem="kxM-Uh-irJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WQY-tC-shk"/>
+                    <constraint firstAttribute="trailing" secondItem="kxM-Uh-irJ" secondAttribute="trailing" id="Zpf-cH-pjU"/>
+                    <constraint firstItem="OWm-FU-LmP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="i9o-My-ACD"/>
+                    <constraint firstAttribute="bottom" secondItem="kxM-Uh-irJ" secondAttribute="bottom" constant="30" id="slg-a8-10b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="datePicker" destination="kxM-Uh-irJ" id="NP4-K7-5gx"/>
+                <outlet property="timeOptionSegmentedControl" destination="OWm-FU-LmP" id="wfc-ia-GUX"/>
+            </connections>
+            <point key="canvasLocation" x="175.36231884057972" y="146.98660714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

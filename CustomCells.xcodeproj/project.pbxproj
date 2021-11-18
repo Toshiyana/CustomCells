@@ -20,6 +20,8 @@
 		9912850827463FEB00F7C7EE /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912850627463FEB00F7C7EE /* TextViewCell.swift */; };
 		9912850927463FEB00F7C7EE /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9912850727463FEB00F7C7EE /* TextViewCell.xib */; };
 		9912850C274641DF00F7C7EE /* UITextView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912850B274641DF00F7C7EE /* UITextView+Additions.swift */; };
+		9912850F27466AFD00F7C7EE /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912850D27466AFD00F7C7EE /* DatePickerCell.swift */; };
+		9912851027466AFD00F7C7EE /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9912850E27466AFD00F7C7EE /* DatePickerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		9912850627463FEB00F7C7EE /* TextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		9912850727463FEB00F7C7EE /* TextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
 		9912850B274641DF00F7C7EE /* UITextView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Additions.swift"; sourceTree = "<group>"; };
+		9912850D27466AFD00F7C7EE /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		9912850E27466AFD00F7C7EE /* DatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				9912850327462FA800F7C7EE /* FieldCell.xib */,
 				9912850627463FEB00F7C7EE /* TextViewCell.swift */,
 				9912850727463FEB00F7C7EE /* TextViewCell.xib */,
+				9912850D27466AFD00F7C7EE /* DatePickerCell.swift */,
+				9912850E27466AFD00F7C7EE /* DatePickerCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				991284F62746271300F7C7EE /* LaunchScreen.storyboard in Resources */,
 				9912850027462B5600F7C7EE /* ImageCell.xib in Resources */,
 				991284F32746271300F7C7EE /* Assets.xcassets in Resources */,
+				9912851027466AFD00F7C7EE /* DatePickerCell.xib in Resources */,
 				991284F12746270F00F7C7EE /* Main.storyboard in Resources */,
 				9912850527462FA800F7C7EE /* FieldCell.xib in Resources */,
 				9912850927463FEB00F7C7EE /* TextViewCell.xib in Resources */,
@@ -181,6 +188,7 @@
 				991284EE2746270F00F7C7EE /* ViewController.swift in Sources */,
 				9912850C274641DF00F7C7EE /* UITextView+Additions.swift in Sources */,
 				991284FF27462B5600F7C7EE /* ImageCell.swift in Sources */,
+				9912850F27466AFD00F7C7EE /* DatePickerCell.swift in Sources */,
 				991284EA2746270F00F7C7EE /* AppDelegate.swift in Sources */,
 				9912850827463FEB00F7C7EE /* TextViewCell.swift in Sources */,
 				9912850427462FA800F7C7EE /* FieldCell.swift in Sources */,
